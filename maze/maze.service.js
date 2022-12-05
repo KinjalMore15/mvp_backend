@@ -11,8 +11,8 @@ module.exports = {
 
 
 
-async function getAll() { 
-    return await db.Maze.findAll();
+async function getAll(userid) { 
+    return await db.Maze.findAll({ where: { sellerId: userid } });
 }
 
 async function getById(id) {

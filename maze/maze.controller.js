@@ -14,6 +14,7 @@ router.get('/', authorize(), getAll);
 module.exports = router;
 
 function createSchema(req, res, next) {
+    console.log(req.body)
     const schema = Joi.object({
         entrance: Joi.string().required(),
         gridSize: Joi.required(),
@@ -23,14 +24,19 @@ function createSchema(req, res, next) {
 }
 
 function create(req, res, next) {
- 
-    mazeService.create(req.body)
+    let maze= {
+        entrance:req.body.entrance,
+        gridSize: req.body.gridSize,
+        walls: req.body.walls,
+        sellerId: req.user.id
+    }
+    mazeService.create(maze)
         .then(() => res.json({ message: 'Maze Created successful' }))
         .catch(next);
 }
 
 function getAll(req, res, next) {
-    mazeService.getAll()
+    mazeService.getAll(req.user.id)
         .then(maze => res.json(maze))
         .catch(next);
 }
