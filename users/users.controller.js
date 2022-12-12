@@ -7,7 +7,8 @@ const userService = require('./user.service');
 const Role = require('_middleware/role');
 
 // routes
-router.post('/authenticate', authenticateSchema, authenticate);
+router.post('/login', authenticateSchema, authenticate);
+router.post('/logout', authorize(), logout);
 router.post('/register', registerSchema, register);
 router.get('/', authorize(), getAll);
 router.get('/current', authorize(), getCurrent);
@@ -15,8 +16,8 @@ router.get('/:id', authorize(), getById);
 router.put('/:id', authorize(), updateSchema, update);
 router.delete('/:id', authorize(), _delete);
 router.post('/deposit', authorize(Role.Buyer),  depositSchema, deposit);
-router.post('/reset', authorize(Role.Seller), reset);
-router.post('/buy', authorize(Role.Seller), buySchema, buy);
+router.post('/reset', authorize(Role.Buyer), reset);
+router.post('/buy', authorize(Role.Buyer), buySchema, buy);
 
 module.exports = router;
 
@@ -32,6 +33,15 @@ function authenticate(req, res, next) {
     userService.authenticate(req.body)
         .then(user => res.json(user))
         .catch(next);
+}
+function logout(req, res, next) {
+    var sess = req.user;
+    console.log(sess);
+    if(sess){
+        req.user = null;
+        return  res.json(null, {'success': true, "message": "user logout successfully"});
+    }
+    // callback(null, {'success': true, "message": "user logout successfully"});
 }
 
 function registerSchema(req, res, next) {

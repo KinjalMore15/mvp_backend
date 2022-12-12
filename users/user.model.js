@@ -6,8 +6,8 @@ function model(sequelize) {
     const attributes = {
         user: { type: DataTypes.STRING, allowNull: false },
         password: { type: DataTypes.STRING, allowNull: false },
-        role: { type: DataTypes.STRING, allowNull: false },
-        deposit: { type: DataTypes.INTEGER, allowNull: false }
+        role: { type: DataTypes.STRING, defaultValue: "buyer", allowNull: false },
+        deposit: { type: DataTypes.INTEGER, defaultValue: 0, allowNull: false }
     };
 
     const options = {

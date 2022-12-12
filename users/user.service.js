@@ -77,10 +77,12 @@ async function _delete(id) {
 }
 
 async function deposit(id, params) {
-    const user = await getUser(id);    
+    const user = await getUser(id);
+    const user_update = await db.User.update({ deposit: Sequelize.literal('deposit + '+params.deposit) }, {where: { id: id }});  
+    console.log(user_update);
     // copy params to user and save
-    Object.assign(user, params);
-    await user.save();
+    // Object.assign(user, params);
+    // await user.save();
     return user.get();
 }
 async function reset(id) {
@@ -104,15 +106,37 @@ async function buy(id, params) {
         amount: params.amount,
         UserId: id
     };
-    await db.ProductBuyer.create(create_data);
+   //await db.ProductBuyer.create(create_data);
+    //const purchase_item = await db.ProductBuyer.findAll({where: { userId: id }},{attributes: ['productId', 'amount']});
+    const purchase_item = await db.ProductBuyer.findAll({
+        where: { userId: id },
+        attributes: [
+           'amount'
+        ],
+        raw: true,
+        include:
+            [
+                {
+                    model: db.Product,
+                    attributes: ['productName'], // Add column names here inside attributes array.
+                    required: true
+                }
+            ]
+
+    });
     const totalAmount = await db.ProductBuyer.findAll({
         attributes: [
           [Sequelize.fn('sum', Sequelize.col('amount')), 'total_amount'],
         ],
+        where: { userId: id },
         group: ['UserId'],
       });
      // console.log(totalAmount);
-     return totalAmount;
+     let sucess_data = {
+        'total_amount':totalAmount[0],
+        'purchase_items':purchase_item
+     }
+     return sucess_data;
     }
 
 // helper functions
