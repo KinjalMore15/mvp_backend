@@ -1,0 +1,1683 @@
+{
+	"info": {
+		"_postman_id": "0a5d854e-faf1-4390-a000-cecd3d1f63df",
+		"name": "mvp_codechallange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1635970"
+	},
+	"item": [
+		{
+			"name": "Authantication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"secondUser\",\r\n    \"password\": \"Abc@123\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Authanticate User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"secondUser\",\r\n    \"password\": \"Abc@123\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/users/authenticate",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										"authenticate"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "358"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"166-gaRIWxMCeEqpLpai5ZDLwxONi8I\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 03:56:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 2,\n    \"user\": \"secondUser\",\n    \"password\": \"$2a$10$Rs2/NRSLYninNlW3jc.LWe53U.tpgZbWxD30BEyAy6Vf6GRmtlpP.\",\n    \"role\": \"buyer\",\n    \"deposit\": 10,\n    \"createdAt\": \"2022-11-30T13:20:33.000Z\",\n    \"updatedAt\": \"2022-11-30T13:20:33.000Z\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsImlhdCI6MTY2OTg2Njk2MCwiZXhwIjoxNjcwNDcxNzYwfQ.BukgADj64Cl-SuYTO9YiQ6tA8ZF72ZVM6SCntKvBaD4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "LogOut All",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/logout/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"logout",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "LogOut All",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"secondUser\",\r\n    \"password\": \"Abc@123\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/users/logout/all",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										"logout",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-YgF4optarOAjr4ZPWQjKh/xLUQM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Dec 2022 04:50:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"msg\": \"You have been Logged Out\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"firstUser\",\r\n    \"password\": \"Abc@123\",\r\n    \"role\": \"buyer\",\r\n    \"deposit\": \"5\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Register User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"firstUser\",\r\n    \"password\": \"Abc@123\",\r\n    \"role\": \"seller\",\r\n    \"deposit\": \"100\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/users/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-18OjcpUEMiVZVBGsWtptK5Nkn4g\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Dec 2022 08:36:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Registration successful\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User CRUD",
+			"item": [
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/users/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "630"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"276-fAiccQVYQ4h7NXrO9fbKMKjRza8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Dec 2022 09:01:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"user\": \"firstUser\",\n        \"password\": \"$2a$10$dwjxNgkpQmNmgXbyJs9Ws.NAixkEyvnEW7/bzIcvrDKJdojBE5LPO\",\n        \"role\": \"seller\",\n        \"deposit\": 100,\n        \"createdAt\": \"2022-12-06T08:36:27.000Z\",\n        \"updatedAt\": \"2022-12-06T08:36:27.000Z\"\n    },\n    {\n        \"id\": 2,\n        \"user\": \"secondUser\",\n        \"password\": \"$2a$10$UN06W2bGfNeVzP386kSKlehn1KBEVndxMT99j6wGJo/aQ/wbAQq1a\",\n        \"role\": \"buyer\",\n        \"deposit\": 100,\n        \"createdAt\": \"2022-12-06T08:38:52.000Z\",\n        \"updatedAt\": \"2022-12-06T08:38:52.000Z\"\n    },\n    {\n        \"id\": 3,\n        \"user\": \"happyUser\",\n        \"password\": \"$2a$10$Xz4hvy6xA4bLMtr0RSQ0HeMeiwFEALQB3EtyXxzbT/WRGbo66NW0a\",\n        \"role\": \"buyer\",\n        \"deposit\": 100,\n        \"createdAt\": \"2022-12-06T08:39:19.000Z\",\n        \"updatedAt\": \"2022-12-06T08:39:19.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Current User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/users/current",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"current"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Current User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/users/current",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										"current"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "209"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d1-GPRSz7HGO4wPb0OBf5z5aZps0mY\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Dec 2022 09:03:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"user\": \"firstUser\",\n    \"password\": \"$2a$10$dwjxNgkpQmNmgXbyJs9Ws.NAixkEyvnEW7/bzIcvrDKJdojBE5LPO\",\n    \"role\": \"seller\",\n    \"deposit\": 100,\n    \"createdAt\": \"2022-12-06T08:36:27.000Z\",\n    \"updatedAt\": \"2022-12-06T08:36:27.000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "206"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ce-04+7AknO98I6SSbgB+W0VCqa8sk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 04:40:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"user\": \"firstUser\",\n    \"password\": \"$2a$10$zzIybiikVPi/3vcJj/.e4OslB5K8StMq.F9LTCXxIoBdQ8xbC3VHO\",\n    \"role\": \"buyer\",\n    \"deposit\": 5,\n    \"createdAt\": \"2022-11-30T13:09:17.000Z\",\n    \"updatedAt\": \"2022-11-30T13:09:17.000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"firstUser\",\r\n    \"password\": \"Abc@123\",\r\n    \"role\": \"seller\",\r\n    \"deposit\": \"5\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "206"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ce-04+7AknO98I6SSbgB+W0VCqa8sk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 04:40:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"user\": \"firstUser\",\n    \"password\": \"$2a$10$zzIybiikVPi/3vcJj/.e4OslB5K8StMq.F9LTCXxIoBdQ8xbC3VHO\",\n    \"role\": \"buyer\",\n    \"deposit\": 5,\n    \"createdAt\": \"2022-11-30T13:09:17.000Z\",\n    \"updatedAt\": \"2022-11-30T13:09:17.000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"firstUser\",\r\n    \"password\": \"Abc@123\",\r\n    \"role\": \"seller\",\r\n    \"deposit\": \"5\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"firstUser\",\r\n    \"password\": \"Abc@123\",\r\n    \"role\": \"seller\",\r\n    \"deposit\": \"5\"    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/users/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"users",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-27o4zzUjhHNmthTJyia4gBCjpos\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 05:29:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted successfully\"\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Product CRUD",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"chips\",\r\n    \"cost\": \"5\",\r\n    \"amountAvailable\": \"15\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/products/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\": \"nachoes\",\r\n    \"cost\": \"5\",\r\n    \"amountAvailable\": \"2.5\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/products/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"products",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-uazjOvEGzXmik/xtT4Btb065+8Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 10:58:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product Created successful\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/products/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/products/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"products",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "776"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"308-Js3WSa85XJ7bouwKjQ2TJ/DasoI\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 06 Dec 2022 11:48:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"productName\": \"chips\",\n        \"cost\": 5,\n        \"amountAvailable\": 15,\n        \"sellerId\": 1,\n        \"createdAt\": \"2022-12-06T09:11:28.000Z\",\n        \"updatedAt\": \"2022-12-06T09:11:28.000Z\"\n    },\n    {\n        \"id\": 2,\n        \"productName\": \"nachos\",\n        \"cost\": 20,\n        \"amountAvailable\": 13.75,\n        \"sellerId\": 1,\n        \"createdAt\": \"2022-12-06T11:47:07.000Z\",\n        \"updatedAt\": \"2022-12-06T11:47:07.000Z\"\n    },\n    {\n        \"id\": 3,\n        \"productName\": \"vine\",\n        \"cost\": 50,\n        \"amountAvailable\": 13.75,\n        \"sellerId\": 1,\n        \"createdAt\": \"2022-12-06T11:47:24.000Z\",\n        \"updatedAt\": \"2022-12-06T11:47:24.000Z\"\n    },\n    {\n        \"id\": 4,\n        \"productName\": \"sigrate\",\n        \"cost\": 5,\n        \"amountAvailable\": 13.75,\n        \"sellerId\": 1,\n        \"createdAt\": \"2022-12-06T11:47:50.000Z\",\n        \"updatedAt\": \"2022-12-06T11:47:50.000Z\"\n    },\n    {\n        \"id\": 5,\n        \"productName\": \"candy\",\n        \"cost\": 5,\n        \"amountAvailable\": 2.75,\n        \"sellerId\": 1,\n        \"createdAt\": \"2022-12-06T11:48:13.000Z\",\n        \"updatedAt\": \"2022-12-06T11:48:13.000Z\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get a Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get a Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/products/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "151"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"97-aQATOCsOzOdxW31B9oDBMe6DETY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 11:53:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"productName\": \"cola\",\n    \"cost\": 5,\n    \"amountAvailable\": 3.5,\n    \"sellerId\": 1,\n    \"createdAt\": \"2022-12-01T09:58:15.000Z\",\n    \"updatedAt\": \"2022-12-01T09:58:15.000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"colao\",\r\n    \"cost\": \"5\",\r\n    \"amountAvailable\": \"4.75\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/products/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"productName\": \"colao\",\r\n    \"cost\": \"5\",\r\n    \"amountAvailable\": \"4.75\"\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/products/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "153"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"99-DPq7isFeMzB6kZuW6hl9yOKqtkM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 13:23:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"productName\": \"colao\",\n    \"cost\": 5,\n    \"amountAvailable\": 4.75,\n    \"sellerId\": 1,\n    \"createdAt\": \"2022-12-01T09:58:15.000Z\",\n    \"updatedAt\": \"2022-12-01T13:23:12.776Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"firstUser\",\r\n    \"password\": \"Abc@123\",\r\n    \"role\": \"seller\",\r\n    \"deposit\": \"5\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/products/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"products",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Product",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"firstUser\",\r\n    \"password\": \"Abc@123\",\r\n    \"role\": \"seller\",\r\n    \"deposit\": \"5\"    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/products/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"products",
+										"3"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-27o4zzUjhHNmthTJyia4gBCjpos\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 01 Dec 2022 19:49:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User deleted successfully\"\n}"
+						}
+					]
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Maze",
+			"item": [
+				{
+					"name": "Post Maze",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"entrance\":  \"A1\",\r\n\"gridSize\": \"8x8\",\r\n\"walls\": [\"C1\", \"G1\", \"A2\", \"C2\", \"E2\", \"G2\", \"C3\", \"E3\", \"B4\", \"C4\", \"E4\", \"F4\", \"G4\", \"B5\", \"E5\", \"B6\", \"D6\", \"E6\", \"G6\", \"H6\", \"B7\", \"D7\", \"G7\", \"B8\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/maze/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"maze",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Post Maze",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"entrance\":  \"A1\",\r\n\"gridSize\": \"8x8\",\r\n\"walls\": [\"C1\", \"G1\", \"A2\", \"C2\", \"E2\", \"G2\", \"C3\", \"E3\", \"B4\", \"C4\", \"E4\", \"F4\", \"G4\", \"B5\", \"E5\", \"B6\", \"D6\", \"E6\", \"G6\", \"H6\", \"B7\", \"D7\", \"G7\", \"B8\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4000/maze/create",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"maze",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "37"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"25-EZDzTx6akDRGVi/Eg36vUTVTgnQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 05 Dec 2022 11:08:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Maze Created successful\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Maze",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/maze/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"maze",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Maze",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4000/maze/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4000",
+									"path": [
+										"maze",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "314"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13a-jU13C5Y7ntXQHldWfMe5uNeq0CE\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 05 Dec 2022 11:08:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"entrance\": \"A1\",\n        \"gridSize\": \"8x8\",\n        \"walls\": \"[\\\"C1\\\",\\\"G1\\\",\\\"A2\\\",\\\"C2\\\",\\\"E2\\\",\\\"G2\\\",\\\"C3\\\",\\\"E3\\\",\\\"B4\\\",\\\"C4\\\",\\\"E4\\\",\\\"F4\\\",\\\"G4\\\",\\\"B5\\\",\\\"E5\\\",\\\"B6\\\",\\\"D6\\\",\\\"E6\\\",\\\"G6\\\",\\\"H6\\\",\\\"B7\\\",\\\"D7\\\",\\\"G7\\\",\\\"B8\\\"]\",\n        \"sellerId\": 1,\n        \"createdAt\": \"2022-12-05T11:08:13.000Z\",\n        \"updatedAt\": \"2022-12-05T11:08:13.000Z\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Deposit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deposit\" : 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deposit Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deposit\" : 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/users/reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"reset"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Reset",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cost\" : 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/reset",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"reset"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-FiEzCcaovvyT0R5nWBGY15CJe/k\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Dec 2022 05:22:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": \"firstUser\",\n    \"deposit\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Buy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\" : 1,\r\n    \"amount\":  20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/buy",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"buy"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Buy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\" : 1,\r\n    \"amount\":  5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/users/buy",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"buy"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "185"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"b9-VHVdtyliloMVjRyU1Do/AlH1bP0\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 06 Dec 2022 12:34:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"total_amount\": {\n        \"total_amount\": 25\n    },\n    \"purchase_items\": [\n        {\n            \"amount\": 15,\n            \"Product.productName\": \"chips\"\n        },\n        {\n            \"amount\": 5,\n            \"Product.productName\": \"chips\"\n        },\n        {\n            \"amount\": 5,\n            \"Product.productName\": \"chips\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInJvbGUiOiJzZWxsZXIiLCJpYXQiOjE2NzA5Mjc5MzcsImV4cCI6MTY3MTUzMjczN30.-Zki8JkfolXVRvXKTryxyFJ3lITddC8pMvT7feWSm08",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
