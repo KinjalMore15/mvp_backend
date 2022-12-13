@@ -13,7 +13,8 @@ module.exports = {
     delete: _delete,
     deposit,
     reset,
-    buy
+    buy,
+    logOut
 };
 
 async function authenticate({ user, password }) {
@@ -150,4 +151,18 @@ async function getUser(id) {
 function omitHash(user) {
     const { hash, ...userWithoutHash } = user;
     return userWithoutHash;
+}
+async function logOut(req) {
+    const token = req.header('Authorization').replace('Bearer ', '');
+    console.log("token",token);
+    if (!token) {
+        response.status(403).send({
+        message: 'No token provided!',
+        });
+    }
+    let create_blacklist = {
+        token: token
+    };
+    await db.BlackListToken.create(create_blacklist);
+   
 }

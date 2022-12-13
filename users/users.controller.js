@@ -3,14 +3,17 @@ const router = express.Router();
 const Joi = require('joi');
 const validateRequest = require('_middleware/validate-request');
 const authorize = require('_middleware/authorize')
+const BlackListToken = require('_middleware/blacklisttoken')
 const userService = require('./user.service');
 const Role = require('_middleware/role');
+const jwt = require('jsonwebtoken');
+const config = require('config.json');
 
 // routes
 router.post('/login', authenticateSchema, authenticate);
-router.post('/logout', authorize(), logout);
+router.post('/logout/all', authorize(), logout);
 router.post('/register', registerSchema, register);
-router.get('/', authorize(), getAll);
+router.get('/', authorize(), BlackListToken(), getAll);
 router.get('/current', authorize(), getCurrent);
 router.get('/:id', authorize(), getById);
 router.put('/:id', authorize(), updateSchema, update);
@@ -35,13 +38,9 @@ function authenticate(req, res, next) {
         .catch(next);
 }
 function logout(req, res, next) {
-    var sess = req.user;
-    console.log(sess);
-    if(sess){
-        req.user = null;
-        return  res.json(null, {'success': true, "message": "user logout successfully"});
-    }
-    // callback(null, {'success': true, "message": "user logout successfully"});
+    userService.logOut(req)
+    .then(() => res.json({ message: 'You have been Logged Out' }))
+    .catch(next);
 }
 
 function registerSchema(req, res, next) {

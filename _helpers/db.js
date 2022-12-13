@@ -20,6 +20,7 @@ async function initialize() {
     db.Product = require('../products/product.model')(sequelize);
     db.ProductBuyer = require('../products/productBuyer.model')(sequelize);
     db.Maze = require('../maze/maze.model')(sequelize);
+    db.BlackListToken = require('../users/blacklisttoken.model')(sequelize);
 
     // sync all models with database
     await sequelize.sync();
